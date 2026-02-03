@@ -1,6 +1,6 @@
 import "./App.css";
 import {Heading,List,add,subtract,multiply,divide} from "./components.jsx"
-import { Card } from "./components";
+import {Card} from "./components.jsx";
 import image from "./assets/work1.png";
 
 const name = "John Doe";
@@ -10,8 +10,10 @@ const customStyle1 = {
   color:"blue",
   border : " 1px solid black"
 }
+
 const time= date.getHours()
 const customStyle2 = {color : " "}
+
 
 let greeting ;
 if (time < 12){
@@ -33,7 +35,7 @@ function App() {
      <div> 
       <h1 className = "Greetings" style = {customStyle2}>{greeting}</h1>
       <p>Created by {name}</p>
-      <p> Copyrigh year {year}</p>
+      <p> Copyright year {year}</p>
       <h1 style = {customStyle1}>Hello World!</h1>
       <h1>My Favourite Food</h1>
       <ul>
@@ -70,12 +72,41 @@ function App() {
         tel="+123 456 789"
         email="abc@gmail.com"
       />
+    <div>
+      <h1>
+        <span>emojipedia</span>
+      </h1>
+      <dl className = "dictionary">{emojipedia.map( emojiTerm =>{
+        return (
+          <Entry
+          key = {emojiTerm.id}
+          emoji = {emojiTerm.emoji}
+          name = {emojiTerm.name}
+          description = {emojiTerm.meaning}
+        />        
+      );
+      })}</dl>
+    </div>
+      
+
+   
+    
+    
 
       </div>
+
   );
 }
+    function renderConditionally(){
+      if (isLoggedIn === true){
+        return <h1>Hello</h1>
+      }
+      else{
+        return
+        <LogIn />
+      }
+      }
     
- 
 //oredr of import and export does not matter 
 //HTML attributes: use camelCase  
 

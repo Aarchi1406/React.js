@@ -1,20 +1,18 @@
-import React from "react";
-
-
 function Heading(){
     return <h1>My favourite Food</h1>
 } 
-export {Heading};
+
 
 function List(){
-    return <div><ul>
+    return <div>
+        <ul>
             <li>Pizza</li>
             <li>Burger</li>
             <li>Noodles</li>
         </ul>
         </div>
 }
-export {List};
+
 
 function add(a1,a2){
     return a1+a2
@@ -32,7 +30,6 @@ function divide(d1,d2){
     return d1/d2
 }
 
-
 function Card(props){
     return (
         <div>
@@ -45,6 +42,15 @@ function Card(props){
     );
 }
 
+var numbers = [3, 56, 2, 48, 5]
 
+function square(x){
+    return x*x
+}
 
-export {add,multiply,subtract,divide,Card }
+const newNumbers = numbers.map(x => x*x);
+const newnum = numbers.map(x=>x*2)
+
+console.log(newNumbers)
+
+export {List,Heading,add,multiply,subtract,divide, Card}
