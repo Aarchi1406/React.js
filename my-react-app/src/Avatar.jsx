@@ -1,6 +1,6 @@
-/*import React from "react";
+import React from "react";
  
 function Avatar(props){
     return <img className = "circle-img" src="{props.img}" alt ="Avatar Image"></img>
 } 
-export {Avatar};*/
+export {Avatar};

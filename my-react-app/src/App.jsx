@@ -87,13 +87,7 @@ function App() {
       );
       })}</dl>
     </div>
-      
-
-   
-    
-    
-
-      </div>
+    </div>
 
   );
 }
